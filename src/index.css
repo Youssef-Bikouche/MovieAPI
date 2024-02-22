@@ -6,8 +6,143 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+.Header{
+  position: fixed;
+  width: 100%;
+  background-color: rgb(228, 40, 40);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  color: white;
+}
+.links li{
+  text-decoration: none;
+  font-size: large;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.links li::after{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: white;
+  color: white;
+  transition: width 0.7s;
+}
+.links li:hover:after{
+  width: 100%;
+}
+.input input{
+  width: 300px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+}
+.input button{
+  color: rgb(228, 40, 40);
+  background-color: white;
+  padding: 12px 2px;
+  border: none;
+  border-radius: 12px;
+  margin-left: 4px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 550;
+}
+/********************* side ************************/
+.Side{
+  position: fixed;
+  left: 0;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  border: 1px solid black;
+  background-color: #28282B;
+  color: white;
+  min-height: 100%;
+}
+.Side > div{
+  width: 100%;
+  cursor: pointer;
+  margin-top: 40px;
+  font-size: larger;
+  font-style: italic;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.7s;
+}
+.Side > div:hover{
+  background-color: white;
+  color: black;
+  transform: scale(1.04);
+}
+
+/********************************** Movie card ****************************/
+.MovieContainer{
+ position: fixed;
+ background-color: rgb(47, 47, 47);
+ left: 200px;
+ top: 70px;
+ width: 90%;
+ height: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ overflow-y: scroll;
+ padding: 0px 0px 0px 50px;
+ 
+}
+.Movie{
+  position: relative;
+  max-height: 400px;
+  max-width: 290px;
+  border-radius: 14px;
+  margin: 40px;
+  text-align: center;
+  color: white;
+  font-size: x-large;
+  font-weight: 500;
+  border: 1px solid white;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 0 #000000;
+  transition:font-size 0.4s ,font-weight 0.4s, box-shadow 0.4s;
+}
+
+.Movie:hover{
+  color: white;
+  font-size: x-large;
+  box-shadow: inset 0 400px 20px 20px #1d1d1d;
+  cursor: pointer;
+}
+.MovieContainer h2{
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-weight: 600;
+  margin-top: 50px;
+}
+.imgDiv{
+  width: 100%;
+  height: 40%;
+}
+/* .Movie .Movie-info{
+ background-color: #28282B;
+ color: white;
+ width: 99%;
+ height: 30%;
+ border-radius: 20px;
+} */
