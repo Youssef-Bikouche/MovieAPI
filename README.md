@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/b568bae6-33f4-4747-a3cb-85e74727c7e9)
+
 # 🎬 React Movie Search App
 
 A simple app to search movies using the OMDB API.
